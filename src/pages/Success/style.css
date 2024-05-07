@@ -1,0 +1,15 @@
+.card.success-card {
+  @media only screen and (min-width: 40em) {
+    width: 32em;
+    padding: 3.5em;
+    gap: 2.5em;
+  }
+}
+
+.success-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  gap: 1.5em;
+}

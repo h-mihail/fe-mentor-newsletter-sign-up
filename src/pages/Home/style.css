@@ -1,0 +1,34 @@
+.card.signup-card {
+  padding: 0;
+
+  @media only screen and (min-width: 40em) {
+    flex-direction: row-reverse;
+    gap: 1.5em;
+    padding: 1.5em;
+  }
+}
+
+#illustration {
+  content: url("/src/assets/illustration-sign-up-mobile.svg");
+  min-width: 100%;
+
+  @media only screen and (min-width: 40em) {
+    content: url("/src/assets/illustration-sign-up-desktop.svg");
+  }
+}
+
+.signup-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5em;
+  gap: 1.5em;
+
+  @media only screen and (min-width: 40em) {
+    padding: 2.5em;
+    justify-content: center;
+    align-items: center;
+  }
+}
