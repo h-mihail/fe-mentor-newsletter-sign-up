@@ -11,5 +11,8 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/",
+  base:
+    process.env.NODE_ENV === "production"
+      ? "/fe-mentor-newsletter-sign-up/"
+      : "/",
 });
