@@ -3,6 +3,10 @@ import { useLocation } from "preact-iso";
 import "./style.css";
 
 export const Home = () => {
+  const basePath =
+    process.env.NODE_ENV === "production"
+      ? "/fe-mentor-newsletter-sign-up"
+      : "";
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const { route } = useLocation();
@@ -19,7 +23,7 @@ export const Home = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email && !error) {
-      route(`/success?email=${email}`);
+      route(`${basePath}/success?email=${email}`);
     } else {
       setError("Valid email required");
     }
